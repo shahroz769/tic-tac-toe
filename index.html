@@ -144,15 +144,16 @@
 
   let playerOne
   let playerTwo
-  let turnCounter = 1
   let mark
-  // // Which plyer will select the mark
-  // let randomNumber = (((Math.round(Math.random()*100))%2))
-  // if(randomNumber == 0) {
-  //   document.getElementById('playermark').textContent = "PICK PLAYER 1'S MARK"
-  // } else {
-  //   document.getElementById('playermark').textContent = "PICK PLAYER 2'S MARK"
-  // }
+  let image1 = document.getElementById("box1")
+  let image2 = document.getElementById("box2")
+  let image3 = document.getElementById("box3")
+  let image4 = document.getElementById("box4")
+  let image5 = document.getElementById("box5")
+  let image6 = document.getElementById("box6")
+  let image7 = document.getElementById("box7")
+  let image8 = document.getElementById("box8")
+  let image9 = document.getElementById("box9")
 
   // function to go to game start page
   function newgamevsplayer() {
@@ -181,23 +182,17 @@
     playerTwo = "X"
     mark = "o"
   }
-  let image1 = document.getElementById("box1")
-  let image2 = document.getElementById("box2")
-  let image3 = document.getElementById("box3")
-  let image4 = document.getElementById("box4")
-  let image5 = document.getElementById("box5")
-  let image6 = document.getElementById("box6")
-  let image7 = document.getElementById("box7")
-  let image8 = document.getElementById("box8")
-  let image9 = document.getElementById("box9")
+
+// function to draw mark
   function drawMark(boxNumber) {
     switch (boxNumber) {
+
       case 1:
         if (image1.src.includes("assets")) {
           return;
         } else {
           document.getElementById("box1").src = "./assets/icon-" + mark + ".svg"
-          turnCounter += 1
+
           if (mark == "x") {
             mark = "o"
             document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -207,12 +202,13 @@
           }
         }
         break;
+
       case 2:
         if (image2.src.includes("assets")) {
           return;
         } else {
           document.getElementById("box2").src = "./assets/icon-" + mark + ".svg"
-          turnCounter += 1
+
           if (mark == "x") {
             mark = "o"
             document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -222,12 +218,13 @@
           }
         }
         break;
+
       case 3:
         if (image3.src.includes("assets")) {
           return;
         } else {
           document.getElementById("box3").src = "./assets/icon-" + mark + ".svg"
-          turnCounter += 1
+
           if (mark == "x") {
             mark = "o"
             document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -237,12 +234,12 @@
           }
         }
         break;
+
       case 4:
       if (image4.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box4").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -251,12 +248,12 @@
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
         }}
         break;
+
       case 5:
       if (image5.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box5").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -265,12 +262,12 @@
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
         }}
         break;
+
       case 6:
       if (image6.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box6").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -279,12 +276,12 @@
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
         }}
         break;
+
       case 7:
       if (image7.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box7").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -293,12 +290,12 @@
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
         }}
         break;
+
       case 8:
       if (image8.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box8").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -307,12 +304,12 @@
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
         }}
         break;
+
       case 9:
       if (image9.src.includes("assets")) {
           return;
         } else {
         document.getElementById("box9").src = "./assets/icon-" + mark + ".svg"
-        turnCounter += 1
         if (mark == "x") {
           mark = "o"
           document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -327,4 +324,3 @@
 </script>
 
 </html>
-background-color: var(--clr-black-100--);
