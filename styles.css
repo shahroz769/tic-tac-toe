@@ -51,7 +51,7 @@ main {
 
 .menu-content {
     max-width: 460px;
-    width: 95%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +96,7 @@ p {
     justify-content: space-evenly;
     background-color: var(--clr-black-50--);
     max-width: 460px;
-    width: 95%;
+    width: 90%;
     height: 205px;
     border-radius: 15px;
     color: var(--clr-white-100--);
@@ -109,7 +109,7 @@ p {
     align-items: center;
     background-color: var(--clr-black-100--);
     max-width: 412px;
-    width: 95%;
+    width: 90%;
     height: 72px;
     border-radius: 10px;
 }
@@ -119,7 +119,7 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 198px;
-    width: 95%;
+    width: 90%;
     height: 54px;
     background-color: var(--clr-black-100--);
     border-radius: 10px;
@@ -133,7 +133,7 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 198px;
-    width: 95%;
+    width: 90%;
     height: 54px;
     background-color: var(--clr-white-100--);
     border-radius: 10px;
@@ -148,7 +148,7 @@ p {
     flex-direction: column;
     gap: 28px;
     max-width: 460px;
-    width: 95%;
+    width: 90%;
 }
 
 .yellow-btn {
@@ -199,7 +199,7 @@ p {
 
 .game-content {
     max-width: 460px;
-    width: 95%;
+    width: 90%;
     display: none;
     flex-direction: column;
     gap: 28px;
@@ -556,6 +556,10 @@ p {
         width: 32px;
         height: 32px;
     }
+    .X-score, .O-score, .ties {
+        width: 80px;
+        height: 64px;
+    }
 }
 
 @media screen and (width <=320px) {
@@ -570,9 +574,5 @@ p {
     .box9 {
         width: 80px;
         height: 80px;
-    }
-    .X-score, .O-score, .ties {
-        width: 80px;
-        height: 64px;
     }
 }
