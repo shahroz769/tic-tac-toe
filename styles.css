@@ -256,7 +256,7 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 0 8px 0 #10212A;
+    /* box-shadow: 0 8px 0 #10212A; */
     cursor: pointer;
 }
 

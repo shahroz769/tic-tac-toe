@@ -21,8 +21,16 @@ let tiesCountNum = +tiesCounter.textContent
 
 // function to go to game start page
 function newgamevsplayer() {
-    document.getElementById('menucontent').style.display = "none"
-    document.getElementById('gamecontent').style.display = "flex"
+    let tl = gsap.timeline({ defaults: { duration: 1 } })
+    tl
+        .to('#menucontent', { x: -75, opacity: 0, duration: .4 })
+        .fromTo('#gamecontent', { x: 75, opacity: 0 }, { x: 0, opacity: 1, duration: .4 })
+    setTimeout(function () {
+        document.getElementById('menucontent').style.display = "none"
+    }, 401)
+    setTimeout(function () {
+        document.getElementById('gamecontent').style.display = "flex"
+    }, 401)
 }
 
 function xTurn() {
@@ -201,6 +209,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box1").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box1', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -215,6 +224,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box2").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box2', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -229,6 +239,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box3").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box3', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -243,6 +254,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box4").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box4', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -257,6 +269,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box5").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box5', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -271,6 +284,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box6").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box6', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -285,6 +299,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box7").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box7', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -299,6 +314,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box8").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box8', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -313,6 +329,7 @@ function drawMark(boxNumber) {
                 return;
             } else {
                 document.getElementById("box9").src = "./assets/icon-" + mark + ".svg"
+                gsap.fromTo('#box9', { y: -35, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: "power4.out" })
                 if (mark == "x") {
                     mark = "o"
                     document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
@@ -327,10 +344,12 @@ function drawMark(boxNumber) {
 
 function winPopup() {
     document.getElementById('winPopup').style.display = "flex"
+    gsap.fromTo('.takes-round, .restart-window', { y: -75, opacity: 0 }, { y: 0, opacity: 1, duration: .5 })
 }
 
 function tiePopup() {
     document.getElementById('drawPopup').style.display = "flex"
+    gsap.fromTo('.takes-round, .restart-window', { y: -75, opacity: 0 }, { y: 0, opacity: 1, duration: .5 })
 }
 
 // function to check win or draw
@@ -340,10 +359,11 @@ function winOrDraw() {
         document.getElementById("box2").src = "./assets/icon-x-dark.png"
         document.getElementById("box3").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#18a09b"
         document.querySelector('.box2').style.backgroundColor = "#18a09b"
         document.querySelector('.box3').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -353,10 +373,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-x-dark.png"
         document.getElementById("box6").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box4').style.backgroundColor = "#18a09b"
         document.querySelector('.box5').style.backgroundColor = "#18a09b"
         document.querySelector('.box6').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -366,10 +387,11 @@ function winOrDraw() {
         document.getElementById("box8").src = "./assets/icon-x-dark.png"
         document.getElementById("box9").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box7').style.backgroundColor = "#18a09b"
         document.querySelector('.box8').style.backgroundColor = "#18a09b"
         document.querySelector('.box9').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -379,10 +401,11 @@ function winOrDraw() {
         document.getElementById("box4").src = "./assets/icon-x-dark.png"
         document.getElementById("box7").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#18a09b"
         document.querySelector('.box4').style.backgroundColor = "#18a09b"
         document.querySelector('.box7').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -392,10 +415,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-x-dark.png"
         document.getElementById("box8").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box2').style.backgroundColor = "#18a09b"
         document.querySelector('.box5').style.backgroundColor = "#18a09b"
         document.querySelector('.box8').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -405,10 +429,11 @@ function winOrDraw() {
         document.getElementById("box6").src = "./assets/icon-x-dark.png"
         document.getElementById("box9").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box3').style.backgroundColor = "#18a09b"
         document.querySelector('.box6').style.backgroundColor = "#18a09b"
         document.querySelector('.box9').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -418,10 +443,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-x-dark.png"
         document.getElementById("box9").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#18a09b"
         document.querySelector('.box5').style.backgroundColor = "#18a09b"
         document.querySelector('.box9').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -431,10 +457,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-x-dark.png"
         document.getElementById("box7").src = "./assets/icon-x-dark.png"
         document.getElementById('winImg').src = "./assets/icon-x.svg"
+        gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box3').style.backgroundColor = "#18a09b"
         document.querySelector('.box5').style.backgroundColor = "#18a09b"
         document.querySelector('.box7').style.backgroundColor = "#18a09b"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -444,10 +471,11 @@ function winOrDraw() {
         document.getElementById("box2").src = "./assets/icon-o-dark.png"
         document.getElementById("box3").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#FFC860"
         document.querySelector('.box2').style.backgroundColor = "#FFC860"
         document.querySelector('.box3').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -457,10 +485,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-o-dark.png"
         document.getElementById("box6").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box4').style.backgroundColor = "#FFC860"
         document.querySelector('.box5').style.backgroundColor = "#FFC860"
         document.querySelector('.box6').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -470,10 +499,11 @@ function winOrDraw() {
         document.getElementById("box8").src = "./assets/icon-o-dark.png"
         document.getElementById("box9").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
         document.querySelector('.box7').style.backgroundColor = "#FFC860"
         document.querySelector('.box8').style.backgroundColor = "#FFC860"
         document.querySelector('.box9').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -483,10 +513,11 @@ function winOrDraw() {
         document.getElementById("box4").src = "./assets/icon-o-dark.png"
         document.getElementById("box7").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#FFC860"
         document.querySelector('.box4').style.backgroundColor = "#FFC860"
         document.querySelector('.box7').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -496,10 +527,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-o-dark.png"
         document.getElementById("box8").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box2').style.backgroundColor = "#FFC860"
         document.querySelector('.box5').style.backgroundColor = "#FFC860"
         document.querySelector('.box8').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -509,10 +541,11 @@ function winOrDraw() {
         document.getElementById("box6").src = "./assets/icon-o-dark.png"
         document.getElementById("box9").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box3').style.backgroundColor = "#FFC860"
         document.querySelector('.box6').style.backgroundColor = "#FFC860"
         document.querySelector('.box9').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -522,10 +555,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-o-dark.png"
         document.getElementById("box9").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
         document.querySelector('.box1').style.backgroundColor = "#FFC860"
         document.querySelector('.box5').style.backgroundColor = "#FFC860"
         document.querySelector('.box9').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -535,10 +569,11 @@ function winOrDraw() {
         document.getElementById("box5").src = "./assets/icon-o-dark.png"
         document.getElementById("box7").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
+        gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
         document.querySelector('.box3').style.backgroundColor = "#FFC860"
         document.querySelector('.box5').style.backgroundColor = "#FFC860"
         document.querySelector('.box7').style.backgroundColor = "#FFC860"
-        setTimeout(winPopup, 500)
+        setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -585,6 +620,7 @@ function quitGame() {
 
 function restartPopup() {
     document.getElementById('restartWindow').style.display = "flex"
+    gsap.fromTo('.takes-round, .restart-window', { y: -75, opacity: 0 }, { y: 0, opacity: 1, duration: .5 })
 }
 
 function cancelRestart() {
