@@ -355,224 +355,256 @@ function tiePopup() {
 // function to check win or draw
 function winOrDraw() {
     if (image1.src.includes("icon-x") && image2.src.includes("icon-x") && image3.src.includes("icon-x")) {
-        document.getElementById("box1").src = "./assets/icon-x-dark.png"
-        document.getElementById("box2").src = "./assets/icon-x-dark.png"
-        document.getElementById("box3").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#18a09b"
-        document.querySelector('.box2').style.backgroundColor = "#18a09b"
-        document.querySelector('.box3').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.getElementById("box1").src = "./assets/icon-x-dark.png"
+            document.getElementById("box2").src = "./assets/icon-x-dark.png"
+            document.getElementById("box3").src = "./assets/icon-x-dark.png"
+            document.querySelector('.box1').style.backgroundColor = "#18a09b"
+            document.querySelector('.box2').style.backgroundColor = "#18a09b"
+            document.querySelector('.box3').style.backgroundColor = "#18a09b"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image4.src.includes("icon-x") && image5.src.includes("icon-x") && image6.src.includes("icon-x")) {
-        document.getElementById("box4").src = "./assets/icon-x-dark.png"
-        document.getElementById("box5").src = "./assets/icon-x-dark.png"
-        document.getElementById("box6").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box4').style.backgroundColor = "#18a09b"
-        document.querySelector('.box5').style.backgroundColor = "#18a09b"
-        document.querySelector('.box6').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.querySelector('.box4').style.backgroundColor = "#18a09b"
+            document.querySelector('.box5').style.backgroundColor = "#18a09b"
+            document.querySelector('.box6').style.backgroundColor = "#18a09b"
+            document.getElementById("box4").src = "./assets/icon-x-dark.png"
+            document.getElementById("box5").src = "./assets/icon-x-dark.png"
+            document.getElementById("box6").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image7.src.includes("icon-x") && image8.src.includes("icon-x") && image9.src.includes("icon-x")) {
-        document.getElementById("box7").src = "./assets/icon-x-dark.png"
-        document.getElementById("box8").src = "./assets/icon-x-dark.png"
-        document.getElementById("box9").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box7').style.backgroundColor = "#18a09b"
-        document.querySelector('.box8').style.backgroundColor = "#18a09b"
-        document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box7").src = "./assets/icon-x-dark.png"
+            document.getElementById("box8").src = "./assets/icon-x-dark.png"
+            document.getElementById("box9").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.querySelector('.box7').style.backgroundColor = "#18a09b"
+            document.querySelector('.box8').style.backgroundColor = "#18a09b"
+            document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-x") && image4.src.includes("icon-x") && image7.src.includes("icon-x")) {
-        document.getElementById("box1").src = "./assets/icon-x-dark.png"
-        document.getElementById("box4").src = "./assets/icon-x-dark.png"
-        document.getElementById("box7").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#18a09b"
-        document.querySelector('.box4').style.backgroundColor = "#18a09b"
-        document.querySelector('.box7').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box1").src = "./assets/icon-x-dark.png"
+            document.getElementById("box4").src = "./assets/icon-x-dark.png"
+            document.getElementById("box7").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box1').style.backgroundColor = "#18a09b"
+            document.querySelector('.box4').style.backgroundColor = "#18a09b"
+            document.querySelector('.box7').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image2.src.includes("icon-x") && image5.src.includes("icon-x") && image8.src.includes("icon-x")) {
-        document.getElementById("box2").src = "./assets/icon-x-dark.png"
-        document.getElementById("box5").src = "./assets/icon-x-dark.png"
-        document.getElementById("box8").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box2').style.backgroundColor = "#18a09b"
-        document.querySelector('.box5').style.backgroundColor = "#18a09b"
-        document.querySelector('.box8').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box2").src = "./assets/icon-x-dark.png"
+            document.getElementById("box5").src = "./assets/icon-x-dark.png"
+            document.getElementById("box8").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box2').style.backgroundColor = "#18a09b"
+            document.querySelector('.box5').style.backgroundColor = "#18a09b"
+            document.querySelector('.box8').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image3.src.includes("icon-x") && image6.src.includes("icon-x") && image9.src.includes("icon-x")) {
-        document.getElementById("box3").src = "./assets/icon-x-dark.png"
-        document.getElementById("box6").src = "./assets/icon-x-dark.png"
-        document.getElementById("box9").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box3').style.backgroundColor = "#18a09b"
-        document.querySelector('.box6').style.backgroundColor = "#18a09b"
-        document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box3").src = "./assets/icon-x-dark.png"
+            document.getElementById("box6").src = "./assets/icon-x-dark.png"
+            document.getElementById("box9").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box3').style.backgroundColor = "#18a09b"
+            document.querySelector('.box6').style.backgroundColor = "#18a09b"
+            document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-x") && image5.src.includes("icon-x") && image9.src.includes("icon-x")) {
-        document.getElementById("box1").src = "./assets/icon-x-dark.png"
-        document.getElementById("box5").src = "./assets/icon-x-dark.png"
-        document.getElementById("box9").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#18a09b"
-        document.querySelector('.box5').style.backgroundColor = "#18a09b"
-        document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box1").src = "./assets/icon-x-dark.png"
+            document.getElementById("box5").src = "./assets/icon-x-dark.png"
+            document.getElementById("box9").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
+            document.querySelector('.box1').style.backgroundColor = "#18a09b"
+            document.querySelector('.box5').style.backgroundColor = "#18a09b"
+            document.querySelector('.box9').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image3.src.includes("icon-x") && image5.src.includes("icon-x") && image7.src.includes("icon-x")) {
-        document.getElementById("box3").src = "./assets/icon-x-dark.png"
-        document.getElementById("box5").src = "./assets/icon-x-dark.png"
-        document.getElementById("box7").src = "./assets/icon-x-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-x.svg"
-        gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box3').style.backgroundColor = "#18a09b"
-        document.querySelector('.box5').style.backgroundColor = "#18a09b"
-        document.querySelector('.box7').style.backgroundColor = "#18a09b"
+        setTimeout( function() {
+            document.getElementById("box3").src = "./assets/icon-x-dark.png"
+            document.getElementById("box5").src = "./assets/icon-x-dark.png"
+            document.getElementById("box7").src = "./assets/icon-x-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-x.svg"
+            gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box3').style.backgroundColor = "#18a09b"
+            document.querySelector('.box5').style.backgroundColor = "#18a09b"
+            document.querySelector('.box7').style.backgroundColor = "#18a09b"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-o") && image2.src.includes("icon-o") && image3.src.includes("icon-o")) {
-        document.getElementById("box1").src = "./assets/icon-o-dark.png"
-        document.getElementById("box2").src = "./assets/icon-o-dark.png"
-        document.getElementById("box3").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#FFC860"
-        document.querySelector('.box2').style.backgroundColor = "#FFC860"
-        document.querySelector('.box3').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box1").src = "./assets/icon-o-dark.png"
+            document.getElementById("box2").src = "./assets/icon-o-dark.png"
+            document.getElementById("box3").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.querySelector('.box1').style.backgroundColor = "#FFC860"
+            document.querySelector('.box2').style.backgroundColor = "#FFC860"
+            document.querySelector('.box3').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image4.src.includes("icon-o") && image5.src.includes("icon-o") && image6.src.includes("icon-o")) {
-        document.getElementById("box4").src = "./assets/icon-o-dark.png"
-        document.getElementById("box5").src = "./assets/icon-o-dark.png"
-        document.getElementById("box6").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box4').style.backgroundColor = "#FFC860"
-        document.querySelector('.box5').style.backgroundColor = "#FFC860"
-        document.querySelector('.box6').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box4").src = "./assets/icon-o-dark.png"
+            document.getElementById("box5").src = "./assets/icon-o-dark.png"
+            document.getElementById("box6").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.querySelector('.box4').style.backgroundColor = "#FFC860"
+            document.querySelector('.box5').style.backgroundColor = "#FFC860"
+            document.querySelector('.box6').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image7.src.includes("icon-o") && image8.src.includes("icon-o") && image9.src.includes("icon-o")) {
-        document.getElementById("box7").src = "./assets/icon-o-dark.png"
-        document.getElementById("box8").src = "./assets/icon-o-dark.png"
-        document.getElementById("box9").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
-        document.querySelector('.box7').style.backgroundColor = "#FFC860"
-        document.querySelector('.box8').style.backgroundColor = "#FFC860"
-        document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box7").src = "./assets/icon-o-dark.png"
+            document.getElementById("box8").src = "./assets/icon-o-dark.png"
+            document.getElementById("box9").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box7, .box8, .box9', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
+            document.querySelector('.box7').style.backgroundColor = "#FFC860"
+            document.querySelector('.box8').style.backgroundColor = "#FFC860"
+            document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image1.src.includes("icon-o") && image4.src.includes("icon-o") && image7.src.includes("icon-o")) {
-        document.getElementById("box1").src = "./assets/icon-o-dark.png"
-        document.getElementById("box4").src = "./assets/icon-o-dark.png"
-        document.getElementById("box7").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#FFC860"
-        document.querySelector('.box4').style.backgroundColor = "#FFC860"
-        document.querySelector('.box7').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box1").src = "./assets/icon-o-dark.png"
+            document.getElementById("box4").src = "./assets/icon-o-dark.png"
+            document.getElementById("box7").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box1, .box4, .box7', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box1').style.backgroundColor = "#FFC860"
+            document.querySelector('.box4').style.backgroundColor = "#FFC860"
+            document.querySelector('.box7').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image2.src.includes("icon-o") && image5.src.includes("icon-o") && image8.src.includes("icon-o")) {
-        document.getElementById("box2").src = "./assets/icon-o-dark.png"
-        document.getElementById("box5").src = "./assets/icon-o-dark.png"
-        document.getElementById("box8").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box2').style.backgroundColor = "#FFC860"
-        document.querySelector('.box5').style.backgroundColor = "#FFC860"
-        document.querySelector('.box8').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box2").src = "./assets/icon-o-dark.png"
+            document.getElementById("box5").src = "./assets/icon-o-dark.png"
+            document.getElementById("box8").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box2, .box5, .box8', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box2').style.backgroundColor = "#FFC860"
+            document.querySelector('.box5').style.backgroundColor = "#FFC860"
+            document.querySelector('.box8').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image3.src.includes("icon-o") && image6.src.includes("icon-o") && image9.src.includes("icon-o")) {
-        document.getElementById("box3").src = "./assets/icon-o-dark.png"
-        document.getElementById("box6").src = "./assets/icon-o-dark.png"
-        document.getElementById("box9").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box3').style.backgroundColor = "#FFC860"
-        document.querySelector('.box6').style.backgroundColor = "#FFC860"
-        document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box3").src = "./assets/icon-o-dark.png"
+            document.getElementById("box6").src = "./assets/icon-o-dark.png"
+            document.getElementById("box9").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box3, .box6, .box9', { 'clip-path': 'circle(0% at 50% 0%)' }, { 'clip-path': 'circle(112% at 50% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box3').style.backgroundColor = "#FFC860"
+            document.querySelector('.box6').style.backgroundColor = "#FFC860"
+            document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image1.src.includes("icon-o") && image5.src.includes("icon-o") && image9.src.includes("icon-o")) {
-        document.getElementById("box1").src = "./assets/icon-o-dark.png"
-        document.getElementById("box5").src = "./assets/icon-o-dark.png"
-        document.getElementById("box9").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
-        document.querySelector('.box1').style.backgroundColor = "#FFC860"
-        document.querySelector('.box5').style.backgroundColor = "#FFC860"
-        document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box1").src = "./assets/icon-o-dark.png"
+            document.getElementById("box5").src = "./assets/icon-o-dark.png"
+            document.getElementById("box9").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box1, .box5, .box9', { 'clip-path': 'circle(0.0% at 0% 0%)' }, { 'clip-path': 'circle(142% at 0% 0%)', stagger: .4 })
+            document.querySelector('.box1').style.backgroundColor = "#FFC860"
+            document.querySelector('.box5').style.backgroundColor = "#FFC860"
+            document.querySelector('.box9').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image3.src.includes("icon-o") && image5.src.includes("icon-o") && image7.src.includes("icon-o")) {
-        document.getElementById("box3").src = "./assets/icon-o-dark.png"
-        document.getElementById("box5").src = "./assets/icon-o-dark.png"
-        document.getElementById("box7").src = "./assets/icon-o-dark.png"
-        document.getElementById('winImg').src = "./assets/icon-o.svg"
-        gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
-        document.querySelector('.box3').style.backgroundColor = "#FFC860"
-        document.querySelector('.box5').style.backgroundColor = "#FFC860"
-        document.querySelector('.box7').style.backgroundColor = "#FFC860"
+        setTimeout( function() {
+            document.getElementById("box3").src = "./assets/icon-o-dark.png"
+            document.getElementById("box5").src = "./assets/icon-o-dark.png"
+            document.getElementById("box7").src = "./assets/icon-o-dark.png"
+            document.getElementById('winImg').src = "./assets/icon-o.svg"
+            gsap.fromTo('.box3, .box5, .box7', { 'clip-path': 'circle(0% at 100% 0%)' }, { 'clip-path': 'circle(142% at 100% 0%)', duration: .5, stagger: .4 })
+            document.querySelector('.box3').style.backgroundColor = "#FFC860"
+            document.querySelector('.box5').style.backgroundColor = "#FFC860"
+            document.querySelector('.box7').style.backgroundColor = "#FFC860"
+        }, 500)
         setTimeout(winPopup, 1500)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"

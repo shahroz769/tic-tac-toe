@@ -51,8 +51,10 @@ main {
 
 .menu-content {
     max-width: 460px;
+    width: 95%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
 }
 
@@ -71,7 +73,9 @@ p {
     font-weight: 500;
 }
 
-#playermark, #firstturn, .restart-content h1{
+#playermark,
+#firstturn,
+.restart-content h1 {
     color: var(--clr-white-100--);
 }
 
@@ -91,10 +95,12 @@ p {
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--clr-black-50--);
-    width: 460px;
+    max-width: 460px;
+    width: 95%;
     height: 205px;
     border-radius: 15px;
     color: var(--clr-white-100--);
+    box-shadow: 0 8px 0 #10212A;
 }
 
 .X-O {
@@ -102,7 +108,8 @@ p {
     justify-content: center;
     align-items: center;
     background-color: var(--clr-black-100--);
-    width: 412px;
+    max-width: 412px;
+    width: 95%;
     height: 72px;
     border-radius: 10px;
 }
@@ -111,7 +118,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 198px;
+    max-width: 198px;
+    width: 95%;
     height: 54px;
     background-color: var(--clr-black-100--);
     border-radius: 10px;
@@ -124,7 +132,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 198px;
+    max-width: 198px;
+    width: 95%;
     height: 54px;
     background-color: var(--clr-white-100--);
     border-radius: 10px;
@@ -138,6 +147,8 @@ p {
     justify-content: center;
     flex-direction: column;
     gap: 28px;
+    max-width: 460px;
+    width: 95%;
 }
 
 .yellow-btn {
@@ -188,7 +199,7 @@ p {
 
 .game-content {
     max-width: 460px;
-    width: 460px;
+    width: 95%;
     display: none;
     flex-direction: column;
     gap: 28px;
@@ -233,10 +244,9 @@ p {
 
 .main-game {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     row-gap: 28px;
-    column-gap: 20px;
+    /* column-gap: 20px; */
     flex-wrap: wrap;
 }
 
@@ -258,6 +268,7 @@ p {
     border-radius: 15px;
     /* box-shadow: 0 8px 0 #10212A; */
     cursor: pointer;
+    
 }
 
 .main-game img {
@@ -415,4 +426,153 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #0000008f;
+}
+
+@media screen and (width <=500px) {
+    
+    h1{
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+
+    h4{
+        font-size: 14px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 130px;
+        height: 130px;
+    }
+    .X-score, .O-score, .ties {
+        width: 120px;
+        height: 64px;
+    }
+    .winner-div img{
+        width: 30px;
+        height: 30px;
+    }
+    .takes-content, .restart-content{
+        padding: 24px;
+    }
+}
+
+@media screen and (width <=444px) {
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (width <=420px) {
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 110px;
+        height: 110px;
+    }
+    .turn {
+        width: 110px;
+        height: 45px;
+    }
+    .restart {
+        width: 45px;
+        height: 45px;
+    }
+    .X-score, .O-score, .ties {
+        width: 110px;
+        height: 64px;
+    }
+}
+
+@media screen and (width <=380px) {
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 100px;
+        height: 100px;
+    }
+    .turn {
+        width: 96px;
+        height: 40px;
+    }
+    .restart {
+        width: 40px;
+        height: 40px;
+    }
+    .X-score, .O-score, .ties {
+        width: 96px;
+        height: 64px;
+    }
+}
+
+@media screen and (width <=350px) {
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 90px;
+        height: 90px;
+    }
+    .turn {
+        width: 86px;
+        height: 32px;
+    }
+    .restart {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (width <=320px) {
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
+        width: 80px;
+        height: 80px;
+    }
+    .X-score, .O-score, .ties {
+        width: 80px;
+        height: 64px;
+    }
 }
