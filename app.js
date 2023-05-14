@@ -592,6 +592,7 @@ function quitGame() {
     document.getElementById('drawPopup').style.display = "none"
     document.getElementById('gamecontent').style.display = "none"
     document.getElementById('menucontent').style.display = "flex"
+    document.getElementById('menucontent').style.opacity = "100"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
     document.querySelector('.box3').style.backgroundColor = "#1F3641"
