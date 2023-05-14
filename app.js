@@ -354,7 +354,9 @@ function tiePopup() {
 
 // function to check win or draw
 function winOrDraw() {
+    let mainGame = document.querySelector('.main-game')
     if (image1.src.includes("icon-x") && image2.src.includes("icon-x") && image3.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             gsap.fromTo('.box1, .box2, .box3', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
             document.getElementById("box1").src = "./assets/icon-x-dark.png"
@@ -371,6 +373,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image4.src.includes("icon-x") && image5.src.includes("icon-x") && image6.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             gsap.fromTo('.box4, .box5, .box6', { 'clip-path': 'circle(0% at 0% 50%)' }, { 'clip-path': 'circle(112% at 0% 50%)', duration: .5, stagger: .4 })
             document.querySelector('.box4').style.backgroundColor = "#18a09b"
@@ -387,6 +390,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image7.src.includes("icon-x") && image8.src.includes("icon-x") && image9.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box7").src = "./assets/icon-x-dark.png"
             document.getElementById("box8").src = "./assets/icon-x-dark.png"
@@ -403,6 +407,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-x") && image4.src.includes("icon-x") && image7.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box1").src = "./assets/icon-x-dark.png"
             document.getElementById("box4").src = "./assets/icon-x-dark.png"
@@ -419,6 +424,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image2.src.includes("icon-x") && image5.src.includes("icon-x") && image8.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box2").src = "./assets/icon-x-dark.png"
             document.getElementById("box5").src = "./assets/icon-x-dark.png"
@@ -435,6 +441,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image3.src.includes("icon-x") && image6.src.includes("icon-x") && image9.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box3").src = "./assets/icon-x-dark.png"
             document.getElementById("box6").src = "./assets/icon-x-dark.png"
@@ -451,6 +458,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-x") && image5.src.includes("icon-x") && image9.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box1").src = "./assets/icon-x-dark.png"
             document.getElementById("box5").src = "./assets/icon-x-dark.png"
@@ -467,6 +475,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image3.src.includes("icon-x") && image5.src.includes("icon-x") && image7.src.includes("icon-x")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box3").src = "./assets/icon-x-dark.png"
             document.getElementById("box5").src = "./assets/icon-x-dark.png"
@@ -483,6 +492,7 @@ function winOrDraw() {
         xCountNum = xCountNum + 1
         document.getElementById('xCounter').textContent = xCountNum
     } else if (image1.src.includes("icon-o") && image2.src.includes("icon-o") && image3.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box1").src = "./assets/icon-o-dark.png"
             document.getElementById("box2").src = "./assets/icon-o-dark.png"
@@ -499,6 +509,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image4.src.includes("icon-o") && image5.src.includes("icon-o") && image6.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box4").src = "./assets/icon-o-dark.png"
             document.getElementById("box5").src = "./assets/icon-o-dark.png"
@@ -515,6 +526,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image7.src.includes("icon-o") && image8.src.includes("icon-o") && image9.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box7").src = "./assets/icon-o-dark.png"
             document.getElementById("box8").src = "./assets/icon-o-dark.png"
@@ -531,6 +543,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image1.src.includes("icon-o") && image4.src.includes("icon-o") && image7.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box1").src = "./assets/icon-o-dark.png"
             document.getElementById("box4").src = "./assets/icon-o-dark.png"
@@ -547,6 +560,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image2.src.includes("icon-o") && image5.src.includes("icon-o") && image8.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box2").src = "./assets/icon-o-dark.png"
             document.getElementById("box5").src = "./assets/icon-o-dark.png"
@@ -563,6 +577,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image3.src.includes("icon-o") && image6.src.includes("icon-o") && image9.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box3").src = "./assets/icon-o-dark.png"
             document.getElementById("box6").src = "./assets/icon-o-dark.png"
@@ -579,6 +594,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image1.src.includes("icon-o") && image5.src.includes("icon-o") && image9.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box1").src = "./assets/icon-o-dark.png"
             document.getElementById("box5").src = "./assets/icon-o-dark.png"
@@ -595,6 +611,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image3.src.includes("icon-o") && image5.src.includes("icon-o") && image7.src.includes("icon-o")) {
+        mainGame.style.pointerEvents = 'none'
         setTimeout(function () {
             document.getElementById("box3").src = "./assets/icon-o-dark.png"
             document.getElementById("box5").src = "./assets/icon-o-dark.png"
@@ -620,6 +637,7 @@ function winOrDraw() {
 
 // Function to quit game and go back to first page
 function quitGame() {
+    document.querySelector('.main-game').style.pointerEvents = ""
     gsap.to('#menucontent', { x: 0, opacity: 1, duration: .4 })
     document.getElementById('winPopup').style.display = "none"
     document.getElementById('drawPopup').style.display = "none"
@@ -657,10 +675,12 @@ function restartPopup() {
 }
 
 function cancelRestart() {
+    document.querySelector('.main-game').style.pointerEvents = ""
     document.getElementById('restartWindow').style.display = "none"
 }
 
 function yesRestart() {
+    document.querySelector('.main-game').style.pointerEvents = ""
     document.getElementById('restartWindow').style.display = "none"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
@@ -684,6 +704,7 @@ function yesRestart() {
 
 // Function to restart game and go back to play page
 function restartGame() {
+    document.querySelector('.main-game').style.pointerEvents = ""
     document.getElementById('winPopup').style.display = "none"
     document.getElementById('drawPopup').style.display = "none"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
@@ -708,6 +729,7 @@ function restartGame() {
 
 // Function to advance to next round
 function nextRound() {
+    document.querySelector('.main-game').style.pointerEvents = ""
     document.getElementById('winPopup').style.display = "none"
     document.getElementById('drawPopup').style.display = "none"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
