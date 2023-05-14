@@ -68,10 +68,6 @@ p {
     font-weight: 500;
 }
 
-#firstturn{
-    visibility: hidden;
-}
-
 .logo {
     display: flex;
     justify-content: center;
@@ -120,7 +116,7 @@ p {
     align-items: center;
     width: 198px;
     height: 54px;
-    background-color: var(--clr-black-100--);
+    background-color: var(--clr-white-100--);
     border-radius: 10px;
 }
 
@@ -181,6 +177,10 @@ p {
     border-radius: 10px;
     margin-right: 20px;
     box-shadow: 0 5px 0 #10212A;
+}
+
+.restartimg img{
+    display: block;
 }
 
 .turn img {

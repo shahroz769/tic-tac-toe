@@ -29,7 +29,7 @@
             <div class="Y-image"><img src="./assets/icon-o.svg" alt="O Icon"></div>
           </div>
         </div>
-        <p id="firstturn">REMEMBER: X GOES FIRST</p>
+        <p id="firstturn">REMEMBER: O GOES FIRST</p>
       </div>
       <div class="newgame">
         <div class="newgame-cpu">
@@ -47,280 +47,98 @@
           <div class="logo2img"><img src="./assets/logo.svg" alt="Logo"></div>
         </div>
         <div class="turn">
-          <div class="Xturnimg"><img id="turnImg" src="./assets/icon-x.svg" alt="X Icon"></div>
+          <div class="Xturnimg"><img id="turnImg" src="./assets/icon-o.svg" alt="X Icon"></div>
           <h4>TURN</h4>
         </div>
-        <div class="restart">
+        <div onclick="restartPopup()" class="restart">
           <div class="restartimg"><img src="./assets/icon-restart.svg" alt="Restart Icon"></div>
         </div>
       </div>
       <div class="main-game">
-        <div class="box1" onclick="drawMark(1)">
+        <div class="box1" onclick="drawMark(1), winOrDraw()">
           <div><img id="box1" src=""></div>
         </div>
-        <div class="box2" onclick="drawMark(2)">
+        <div class="box2" onclick="drawMark(2), winOrDraw()">
           <div><img id="box2" src=""></div>
         </div>
-        <div class="box3" onclick="drawMark(3)">
+        <div class="box3" onclick="drawMark(3), winOrDraw()">
           <div><img id="box3" src=""></div>
         </div>
-        <div class="box4" onclick="drawMark(4)">
+        <div class="box4" onclick="drawMark(4), winOrDraw()">
           <div><img id="box4" src=""></div>
         </div>
-        <div class="box5" onclick="drawMark(5)">
+        <div class="box5" onclick="drawMark(5), winOrDraw()">
           <div><img id="box5" src=""></div>
         </div>
-        <div class="box6" onclick="drawMark(6)">
+        <div class="box6" onclick="drawMark(6), winOrDraw()">
           <div><img id="box6" src=""></div>
         </div>
-        <div class="box7" onclick="drawMark(7)">
+        <div class="box7" onclick="drawMark(7), winOrDraw()">
           <div><img id="box7" src=""></div>
         </div>
-        <div class="box8" onclick="drawMark(8)">
+        <div class="box8" onclick="drawMark(8), winOrDraw()">
           <div><img id="box8" src=""></div>
         </div>
-        <div class="box9" onclick="drawMark(9)">
+        <div class="box9" onclick="drawMark(9), winOrDraw()">
           <div><img id="box9" src=""></div>
         </div>
       </div>
       <div class="score">
         <div class="X-score">
-          <p>X (P2)</p>
-          <h2>14</h2>
+          <p>X <span id="xSpan">(P2)</span></p>
+          <h2 id="xCounter">0</h2>
         </div>
         <div class="ties">
           <p>TIES</p>
-          <h2>32</h2>
+          <h2 id="tiesCounter">0</h2>
         </div>
         <div class="O-score">
-          <p>O (P1)</p>
-          <h2>11</h2>
+          <p>O <span id="oSpan">(P1)</span></p>
+          <h2 id="oCounter">0</h2>
         </div>
       </div>
     </div>
-    <section class="takes-round-parent">
+    <section id="winPopup" class="takes-round-parent">
       <div class="takes-round">
         <div class="takes-content">
+          <h4 id="playerWinText"></h4>
           <div class="winner-div">
             <div class="winner-img">
-              <img src="./assets/icon-o.svg">
+              <img id="winImg" src="./assets/icon-o.svg">
             </div>
-            <h1>TAKES THE ROUND</h1>
+            <h1 id="winText">TAKES THE ROUND</h1>
           </div>
           <div class="takes-btn">
-            <button class="quit-btn">QUIT</button>
-            <button class="next-round-btn">NEXT ROUND</button>
+            <button onclick="quitGame()" class="quit-btn">QUIT</button>
+            <button onclick="nextRound()" class="next-round-btn">NEXT ROUND</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="restart-window-parent">
+    <section id="restartWindow" class="restart-window-parent">
       <div class="restart-window">
         <div class="restart-content">
           <h1>RESTART GAME?</h1>
           <div class="restart-btn">
-            <button class="cancel-restart-btn">NO, CANCEL</button>
-            <button class="approve-restart-btn">YES, RESTART</button>
+            <button onclick="cancelRestart()" class="cancel-restart-btn">NO, CANCEL</button>
+            <button onclick="yesRestart()" class="approve-restart-btn">YES, RESTART</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="tie-window-parent">
+    <section id="drawPopup" class="tie-window-parent">
       <div class="restart-window">
         <div class="restart-content">
           <h1>ROUND TIED</h1>
           <div class="restart-btn">
-            <button class="cancel-restart-btn">QUIT</button>
-            <button class="approve-restart-btn">NEXT ROUND</button>
+            <button onclick="quitGame()" class="cancel-restart-btn">QUIT</button>
+            <button onclick="nextRound()" class="approve-restart-btn">NEXT ROUND</button>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <!-- <script src="./app.js"></script> -->
+  <script src="./app.js"></script>
 </body>
-
-<script>
-
-  let playerOne
-  let playerTwo
-  let mark
-  let image1 = document.getElementById("box1")
-  let image2 = document.getElementById("box2")
-  let image3 = document.getElementById("box3")
-  let image4 = document.getElementById("box4")
-  let image5 = document.getElementById("box5")
-  let image6 = document.getElementById("box6")
-  let image7 = document.getElementById("box7")
-  let image8 = document.getElementById("box8")
-  let image9 = document.getElementById("box9")
-
-  // function to go to game start page
-  function newgamevsplayer() {
-    document.getElementById('menucontent').style.display = "none"
-    document.getElementById('gamecontent').style.display = "flex"
-  }
-
-  function xTurn() {
-    document.getElementById('xTurn').style.backgroundColor = "var(--clr-white-100--)"
-    document.getElementById('yTurn').style.backgroundColor = "var(--clr-black-100--)"
-    document.getElementById('firstturn').textContent = "REMEMBER: X GOES FIRST"
-    document.getElementById('turnImg').src = "./assets/icon-x.svg"
-    document.getElementById('firstturn').style.visibility = "initial"
-    playerOne = "X"
-    playerTwo = "O"
-    mark = "x"
-  }
-
-  function yTurn() {
-    document.getElementById('yTurn').style.backgroundColor = "var(--clr-white-100--)"
-    document.getElementById('xTurn').style.backgroundColor = "var(--clr-black-100--)"
-    document.getElementById('firstturn').textContent = "REMEMBER: O GOES FIRST"
-    document.getElementById('turnImg').src = "./assets/icon-o.svg"
-    document.getElementById('firstturn').style.visibility = "initial"
-    playerOne = "O"
-    playerTwo = "X"
-    mark = "o"
-  }
-
-// function to draw mark
-  function drawMark(boxNumber) {
-    switch (boxNumber) {
-
-      case 1:
-        if (image1.src.includes("assets")) {
-          return;
-        } else {
-          document.getElementById("box1").src = "./assets/icon-" + mark + ".svg"
-
-          if (mark == "x") {
-            mark = "o"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          } else {
-            mark = "x"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          }
-        }
-        break;
-
-      case 2:
-        if (image2.src.includes("assets")) {
-          return;
-        } else {
-          document.getElementById("box2").src = "./assets/icon-" + mark + ".svg"
-
-          if (mark == "x") {
-            mark = "o"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          } else {
-            mark = "x"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          }
-        }
-        break;
-
-      case 3:
-        if (image3.src.includes("assets")) {
-          return;
-        } else {
-          document.getElementById("box3").src = "./assets/icon-" + mark + ".svg"
-
-          if (mark == "x") {
-            mark = "o"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          } else {
-            mark = "x"
-            document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-          }
-        }
-        break;
-
-      case 4:
-      if (image4.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box4").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-
-      case 5:
-      if (image5.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box5").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-
-      case 6:
-      if (image6.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box6").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-
-      case 7:
-      if (image7.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box7").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-
-      case 8:
-      if (image8.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box8").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-
-      case 9:
-      if (image9.src.includes("assets")) {
-          return;
-        } else {
-        document.getElementById("box9").src = "./assets/icon-" + mark + ".svg"
-        if (mark == "x") {
-          mark = "o"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        } else {
-          mark = "x"
-          document.getElementById('turnImg').src = "./assets/icon-" + mark + ".svg"
-        }}
-        break;
-    }
-  }
-
-</script>
 
 </html>
