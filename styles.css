@@ -119,7 +119,8 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 198px;
-    width: 90%;
+    width: 100%;
+    margin: 0 8px;
     height: 54px;
     background-color: var(--clr-black-100--);
     border-radius: 10px;
@@ -133,7 +134,8 @@ p {
     justify-content: center;
     align-items: center;
     max-width: 198px;
-    width: 90%;
+    width: 100%;
+    margin: 0 8px;
     height: 54px;
     background-color: var(--clr-white-100--);
     border-radius: 10px;
