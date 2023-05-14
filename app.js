@@ -523,7 +523,7 @@ function winOrDraw() {
         oCountNum = oCountNum + 1
         document.getElementById('oCounter').textContent = oCountNum
     } else if (image2.src.includes("icon-o") && image5.src.includes("icon-o") && image8.src.includes("icon-o")) {
-        document.getElementById("box8").src = "./assets/icon-o-dark.png"
+        document.getElementById("box2").src = "./assets/icon-o-dark.png"
         document.getElementById("box5").src = "./assets/icon-o-dark.png"
         document.getElementById("box8").src = "./assets/icon-o-dark.png"
         document.getElementById('winImg').src = "./assets/icon-o.svg"
