@@ -32,10 +32,10 @@
         <p id="firstturn">REMEMBER: O GOES FIRST</p>
       </div>
       <div class="newgame">
-        <div class="newgame-cpu">
+        <div class="newgame-cpu yellow-btn">
           <h3>NEW GAME (VS CPU) Soon...</h3>
         </div>
-        <div onclick="newgamevsplayer()" class="newgame-player">
+        <div onclick="newgamevsplayer()" class="newgame-player teal-btn">
           <h3>NEW GAME (VS PLAYER)</h3>
         </div>
       </div>
@@ -50,36 +50,36 @@
           <div class="Xturnimg"><img id="turnImg" src="./assets/icon-o.svg" alt="X Icon"></div>
           <h4>TURN</h4>
         </div>
-        <div onclick="restartPopup()" class="restart">
+        <div onclick="restartPopup()" class="restart silver-btn">
           <div class="restartimg"><img src="./assets/icon-restart.svg" alt="Restart Icon"></div>
         </div>
       </div>
       <div class="main-game">
-        <div class="box1" onclick="drawMark(1), winOrDraw()">
+        <div class="box1" onmouseout="removeOutline(1)" onmouseover="drawOutline(1)" onclick="drawMark(1), winOrDraw()">
           <div><img id="box1" src=""></div>
         </div>
-        <div class="box2" onclick="drawMark(2), winOrDraw()">
+        <div class="box2" onmouseout="removeOutline(2)" onmouseover="drawOutline(2)" onclick="drawMark(2), winOrDraw()">
           <div><img id="box2" src=""></div>
         </div>
-        <div class="box3" onclick="drawMark(3), winOrDraw()">
+        <div class="box3" onmouseout="removeOutline(3)" onmouseover="drawOutline(3)" onclick="drawMark(3), winOrDraw()">
           <div><img id="box3" src=""></div>
         </div>
-        <div class="box4" onclick="drawMark(4), winOrDraw()">
+        <div class="box4" onmouseout="removeOutline(4)" onmouseover="drawOutline(4)" onclick="drawMark(4), winOrDraw()">
           <div><img id="box4" src=""></div>
         </div>
-        <div class="box5" onclick="drawMark(5), winOrDraw()">
+        <div class="box5" onmouseout="removeOutline(5)" onmouseover="drawOutline(5)" onclick="drawMark(5), winOrDraw()">
           <div><img id="box5" src=""></div>
         </div>
-        <div class="box6" onclick="drawMark(6), winOrDraw()">
+        <div class="box6" onmouseout="removeOutline(6)" onmouseover="drawOutline(6)" onclick="drawMark(6), winOrDraw()">
           <div><img id="box6" src=""></div>
         </div>
-        <div class="box7" onclick="drawMark(7), winOrDraw()">
+        <div class="box7" onmouseout="removeOutline(7)" onmouseover="drawOutline(7)" onclick="drawMark(7), winOrDraw()">
           <div><img id="box7" src=""></div>
         </div>
-        <div class="box8" onclick="drawMark(8), winOrDraw()">
+        <div class="box8" onmouseout="removeOutline(8)" onmouseover="drawOutline(8)" onclick="drawMark(8), winOrDraw()">
           <div><img id="box8" src=""></div>
         </div>
-        <div class="box9" onclick="drawMark(9), winOrDraw()">
+        <div class="box9" onmouseout="removeOutline(9)" onmouseover="drawOutline(9)" onclick="drawMark(9), winOrDraw()">
           <div><img id="box9" src=""></div>
         </div>
       </div>
@@ -109,8 +109,8 @@
             <h1 id="winText">TAKES THE ROUND</h1>
           </div>
           <div class="takes-btn">
-            <button onclick="quitGame()" class="quit-btn">QUIT</button>
-            <button onclick="nextRound()" class="next-round-btn">NEXT ROUND</button>
+            <button onclick="quitGame()" class="quit-btn silver-btn">QUIT</button>
+            <button onclick="nextRound()" class="next-round-btn yellow-btn">NEXT ROUND</button>
           </div>
         </div>
       </div>
@@ -120,8 +120,8 @@
         <div class="restart-content">
           <h1>RESTART GAME?</h1>
           <div class="restart-btn">
-            <button onclick="cancelRestart()" class="cancel-restart-btn">NO, CANCEL</button>
-            <button onclick="yesRestart()" class="approve-restart-btn">YES, RESTART</button>
+            <button onclick="cancelRestart()" class="cancel-restart-btn silver-btn">NO, CANCEL</button>
+            <button onclick="yesRestart()" class="approve-restart-btn yellow-btn">YES, RESTART</button>
           </div>
         </div>
       </div>
@@ -131,8 +131,8 @@
         <div class="restart-content">
           <h1>ROUND TIED</h1>
           <div class="restart-btn">
-            <button onclick="quitGame()" class="cancel-restart-btn">QUIT</button>
-            <button onclick="nextRound()" class="approve-restart-btn">NEXT ROUND</button>
+            <button onclick="quitGame()" class="cancel-restart-btn silver-btn">QUIT</button>
+            <button onclick="nextRound()" class="approve-restart-btn yellow-btn">NEXT ROUND</button>
           </div>
         </div>
       </div>

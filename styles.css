@@ -29,6 +29,9 @@
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    color: var(--clr-black-100--);
     /* outline: 1px solid var(--clr-yellow-100--); */
 }
 
@@ -66,6 +69,10 @@ h4 {
 p {
     font-size: var(--body-size--);
     font-weight: 500;
+}
+
+#playermark, #firstturn, .restart-content h1{
+    color: var(--clr-white-100--);
 }
 
 .logo {
@@ -108,6 +115,9 @@ p {
     height: 54px;
     background-color: var(--clr-black-100--);
     border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .Y {
@@ -118,6 +128,9 @@ p {
     height: 54px;
     background-color: var(--clr-white-100--);
     border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .newgame {
@@ -125,6 +138,22 @@ p {
     justify-content: center;
     flex-direction: column;
     gap: 28px;
+}
+
+.yellow-btn {
+    cursor: pointer;
+}
+
+.yellow-btn:active {
+    background-color: var(--clr-yellow-50--);
+}
+
+.teal-btn {
+    cursor: pointer;
+}
+
+.teal-btn:active {
+    background-color: var(--clr-teal-50--);
 }
 
 .newgame-cpu {
@@ -179,7 +208,15 @@ p {
     box-shadow: 0 5px 0 #10212A;
 }
 
-.restartimg img{
+.silver-btn {
+    cursor: pointer;
+}
+
+.silver-btn:active {
+    background-color: var(--clr-white-50--);
+}
+
+.restartimg img {
     display: block;
 }
 
@@ -220,6 +257,7 @@ p {
     align-items: center;
     border-radius: 15px;
     box-shadow: 0 8px 0 #10212A;
+    cursor: pointer;
 }
 
 .main-game img {
@@ -335,7 +373,7 @@ p {
     border: none;
     outline: none;
     font-weight: var(--head-XS-weight--);
-    padding: 14px;
+    padding: 16px;
     border-radius: 10px;
     font-size: var(--head-XS-size--);
     cursor: pointer;
