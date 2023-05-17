@@ -652,12 +652,9 @@ function quitGame() {
     document.querySelector('.box7').style.backgroundColor = "#1F3641"
     document.querySelector('.box8').style.backgroundColor = "#1F3641"
     document.querySelector('.box9').style.backgroundColor = "#1F3641"
-    xCountNum = 0
-    oCountNum = 0
-    tiesCountNum = 0
-    document.getElementById('xCounter').textContent = xCountNum
-    document.getElementById('oCounter').textContent = oCountNum
-    document.getElementById('tiesCounter').textContent = tiesCountNum
+    document.getElementById('xCounter').textContent = 0
+    document.getElementById('oCounter').textContent = 0
+    document.getElementById('tiesCounter').textContent = 0
     image1.src = ""
     image2.src = ""
     image3.src = ""
@@ -691,6 +688,9 @@ function yesRestart() {
     document.querySelector('.box7').style.backgroundColor = "#1F3641"
     document.querySelector('.box8').style.backgroundColor = "#1F3641"
     document.querySelector('.box9').style.backgroundColor = "#1F3641"
+    document.getElementById('xCounter').textContent = 0
+    document.getElementById('oCounter').textContent = 0
+    document.getElementById('tiesCounter').textContent = 0
     image1.src = ""
     image2.src = ""
     image3.src = ""
