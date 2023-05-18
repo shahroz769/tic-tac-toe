@@ -685,7 +685,7 @@ function cancelRestart() {
 
 function yesRestart() {
     document.querySelector('.main-game').style.pointerEvents = ""
-    gsap.to('.takes-round, .restart-window', { y: 75, opacity: 0, duration: .5 })
+    gsap.to('.restart-window', { y: 75, opacity: 0, duration: .5 })
     setTimeout(() => {
         document.getElementById('restartWindow').style.display = "none"
     }, 300);
@@ -717,7 +717,7 @@ function yesRestart() {
 
 // Function to advance to next round
 function nextRound() {
-    gsap.to('.takes-round, .restart-window', { y: 75, opacity: 1, duration: .5 })
+    gsap.to('.restart-window, .takes-round', { y: 75, opacity: 0, duration: .5 })
     document.querySelector('.main-game').style.pointerEvents = ""
     setTimeout(() => {
         document.getElementById('winPopup').style.display = "none"
