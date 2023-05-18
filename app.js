@@ -674,12 +674,18 @@ function restartPopup() {
 
 function cancelRestart() {
     document.querySelector('.main-game').style.pointerEvents = ""
-    document.getElementById('restartWindow').style.display = "none"
+    gsap.to('.takes-round, .restart-window', { y: 75, opacity: 0, duration: .5 })
+    setTimeout(() => {
+        document.getElementById('restartWindow').style.display = "none"
+    }, 300);
 }
 
 function yesRestart() {
     document.querySelector('.main-game').style.pointerEvents = ""
-    document.getElementById('restartWindow').style.display = "none"
+    gsap.to('.takes-round, .restart-window', { y: 75, opacity: 0, duration: .5 })
+    setTimeout(() => {
+        document.getElementById('restartWindow').style.display = "none"
+    }, 300);
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
     document.querySelector('.box3').style.backgroundColor = "#1F3641"
@@ -705,9 +711,12 @@ function yesRestart() {
 
 // Function to advance to next round
 function nextRound() {
+    gsap.to('.takes-round, .restart-window', { y: 75, opacity: 1, duration: .5 })
     document.querySelector('.main-game').style.pointerEvents = ""
-    document.getElementById('winPopup').style.display = "none"
-    document.getElementById('drawPopup').style.display = "none"
+    setTimeout(() => {
+        document.getElementById('winPopup').style.display = "none"
+        document.getElementById('drawPopup').style.display = "none"
+    }, 300);
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
     document.querySelector('.box3').style.backgroundColor = "#1F3641"
