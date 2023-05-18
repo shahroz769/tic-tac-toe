@@ -32,9 +32,9 @@
         <p id="firstturn">REMEMBER: O GOES FIRST</p>
       </div>
       <div class="newgame">
-        <div class="newgame-cpu yellow-btn">
+        <!-- <div class="newgame-cpu yellow-btn">
           <h3>NEW GAME (VS CPU) Soon...</h3>
-        </div>
+        </div> -->
         <div onclick="newgamevsplayer()" class="newgame-player teal-btn">
           <h3>NEW GAME (VS PLAYER)</h3>
         </div>
@@ -109,7 +109,7 @@
             <h1 id="winText">TAKES THE ROUND</h1>
           </div>
           <div class="takes-btn">
-            <button onclick="quitGame()" class="quit-btn silver-btn">QUIT</button>
+            <button onclick="quitGame()" class="quit-btn red">QUIT</button>
             <button onclick="nextRound()" class="next-round-btn yellow-btn">NEXT ROUND</button>
           </div>
         </div>
@@ -118,10 +118,11 @@
     <section id="restartWindow" class="restart-window-parent">
       <div class="restart-window">
         <div class="restart-content">
-          <h1>RESTART GAME?</h1>
+          <h1>GAME OPTIONS</h1>
           <div class="restart-btn">
-            <button onclick="cancelRestart()" class="cancel-restart-btn silver-btn">NO, CANCEL</button>
-            <button onclick="yesRestart()" class="approve-restart-btn yellow-btn">YES, RESTART</button>
+            <button onclick="cancelRestart()" class="cancel-restart-btn silver-btn">CANCEL</button>
+            <button onclick="yesRestart()" class="approve-restart-btn yellow-btn">RESTART</button>
+            <button onclick="quitGame()" class="quit-btn red">QUIT</button>
           </div>
         </div>
       </div>
@@ -131,7 +132,7 @@
         <div class="restart-content">
           <h1>ROUND TIED</h1>
           <div class="restart-btn">
-            <button onclick="quitGame()" class="cancel-restart-btn silver-btn">QUIT</button>
+            <button onclick="quitGame()" class="cancel-restart-btn red">QUIT</button>
             <button onclick="nextRound()" class="approve-restart-btn yellow-btn">NEXT ROUND</button>
           </div>
         </div>

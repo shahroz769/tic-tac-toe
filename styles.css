@@ -231,6 +231,7 @@ p {
 
 .restartimg img {
     display: block;
+    width: 30px;
 }
 
 .turn img {
@@ -430,6 +431,15 @@ p {
     background-color: #0000008f;
 }
 
+.red{
+    background-color: #c75a5a;
+    box-shadow: 0 5px 0 #96393c;
+}
+
+.red:active {
+    background-color: #e07e7e;
+}
+
 @media screen and (width <=500px) {
     
     h1{
@@ -465,6 +475,10 @@ p {
     }
     .takes-content, .restart-content{
         padding: 24px;
+    }
+
+    .main-game {
+        row-gap: 16px;
     }
 }
 
@@ -535,6 +549,9 @@ p {
         width: 96px;
         height: 64px;
     }
+    .restartimg img {
+        width: 24px;
+    }
 }
 
 @media screen and (width <=350px) {
@@ -561,6 +578,9 @@ p {
     .X-score, .O-score, .ties {
         width: 80px;
         height: 64px;
+    }
+    .restartimg img {
+        width: 20px;
     }
 }
 

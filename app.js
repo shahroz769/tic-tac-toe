@@ -643,41 +643,6 @@ function quitGame() {
     document.getElementById('drawPopup').style.display = "none"
     document.getElementById('gamecontent').style.display = "none"
     document.getElementById('menucontent').style.display = "flex"
-    document.querySelector('.box1').style.backgroundColor = "#1F3641"
-    document.querySelector('.box2').style.backgroundColor = "#1F3641"
-    document.querySelector('.box3').style.backgroundColor = "#1F3641"
-    document.querySelector('.box4').style.backgroundColor = "#1F3641"
-    document.querySelector('.box5').style.backgroundColor = "#1F3641"
-    document.querySelector('.box6').style.backgroundColor = "#1F3641"
-    document.querySelector('.box7').style.backgroundColor = "#1F3641"
-    document.querySelector('.box8').style.backgroundColor = "#1F3641"
-    document.querySelector('.box9').style.backgroundColor = "#1F3641"
-    document.getElementById('xCounter').textContent = 0
-    document.getElementById('oCounter').textContent = 0
-    document.getElementById('tiesCounter').textContent = 0
-    image1.src = ""
-    image2.src = ""
-    image3.src = ""
-    image4.src = ""
-    image5.src = ""
-    image6.src = ""
-    image7.src = ""
-    image8.src = ""
-    image9.src = ""
-}
-
-function restartPopup() {
-    document.getElementById('restartWindow').style.display = "flex"
-    gsap.fromTo('.takes-round, .restart-window', { y: -75, opacity: 0 }, { y: 0, opacity: 1, duration: .5 })
-}
-
-function cancelRestart() {
-    document.querySelector('.main-game').style.pointerEvents = ""
-    document.getElementById('restartWindow').style.display = "none"
-}
-
-function yesRestart() {
-    document.querySelector('.main-game').style.pointerEvents = ""
     document.getElementById('restartWindow').style.display = "none"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
@@ -703,10 +668,19 @@ function yesRestart() {
 }
 
 // Function to restart game and go back to play page
-function restartGame() {
+function restartPopup() {
+    document.getElementById('restartWindow').style.display = "flex"
+    gsap.fromTo('.takes-round, .restart-window', { y: -75, opacity: 0 }, { y: 0, opacity: 1, duration: .5 })
+}
+
+function cancelRestart() {
     document.querySelector('.main-game').style.pointerEvents = ""
-    document.getElementById('winPopup').style.display = "none"
-    document.getElementById('drawPopup').style.display = "none"
+    document.getElementById('restartWindow').style.display = "none"
+}
+
+function yesRestart() {
+    document.querySelector('.main-game').style.pointerEvents = ""
+    document.getElementById('restartWindow').style.display = "none"
     document.querySelector('.box1').style.backgroundColor = "#1F3641"
     document.querySelector('.box2').style.backgroundColor = "#1F3641"
     document.querySelector('.box3').style.backgroundColor = "#1F3641"
@@ -716,6 +690,9 @@ function restartGame() {
     document.querySelector('.box7').style.backgroundColor = "#1F3641"
     document.querySelector('.box8').style.backgroundColor = "#1F3641"
     document.querySelector('.box9').style.backgroundColor = "#1F3641"
+    document.getElementById('xCounter').textContent = 0
+    document.getElementById('oCounter').textContent = 0
+    document.getElementById('tiesCounter').textContent = 0
     image1.src = ""
     image2.src = ""
     image3.src = ""
