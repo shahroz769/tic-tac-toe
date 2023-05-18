@@ -367,7 +367,7 @@ function winOrDraw() {
             document.querySelector('.box3').style.backgroundColor = "#18a09b"
             document.getElementById('winImg').src = "./assets/icon-x.svg"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -384,7 +384,7 @@ function winOrDraw() {
             document.getElementById("box6").src = "./assets/icon-x-dark.png"
             document.getElementById('winImg').src = "./assets/icon-x.svg"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -401,7 +401,7 @@ function winOrDraw() {
             document.querySelector('.box8').style.backgroundColor = "#18a09b"
             document.querySelector('.box9').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -418,7 +418,7 @@ function winOrDraw() {
             document.querySelector('.box4').style.backgroundColor = "#18a09b"
             document.querySelector('.box7').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -435,7 +435,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#18a09b"
             document.querySelector('.box8').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -452,7 +452,7 @@ function winOrDraw() {
             document.querySelector('.box6').style.backgroundColor = "#18a09b"
             document.querySelector('.box9').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -469,7 +469,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#18a09b"
             document.querySelector('.box9').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -486,7 +486,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#18a09b"
             document.querySelector('.box7').style.backgroundColor = "#18a09b"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#31C3BD"
         document.getElementById('playerWinText').textContent = "PLAYER " + xMark + " WINS!"
         xCountNum = xCountNum + 1
@@ -503,7 +503,7 @@ function winOrDraw() {
             document.querySelector('.box2').style.backgroundColor = "#FFC860"
             document.querySelector('.box3').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -520,7 +520,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#FFC860"
             document.querySelector('.box6').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -537,7 +537,7 @@ function winOrDraw() {
             document.querySelector('.box8').style.backgroundColor = "#FFC860"
             document.querySelector('.box9').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -554,7 +554,7 @@ function winOrDraw() {
             document.querySelector('.box4').style.backgroundColor = "#FFC860"
             document.querySelector('.box7').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -571,7 +571,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#FFC860"
             document.querySelector('.box8').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -588,7 +588,7 @@ function winOrDraw() {
             document.querySelector('.box6').style.backgroundColor = "#FFC860"
             document.querySelector('.box9').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -605,7 +605,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#FFC860"
             document.querySelector('.box9').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -622,7 +622,7 @@ function winOrDraw() {
             document.querySelector('.box5').style.backgroundColor = "#FFC860"
             document.querySelector('.box7').style.backgroundColor = "#FFC860"
         }, 500)
-        setTimeout(winPopup, 1500)
+        setTimeout(winPopup, 2000)
         document.getElementById('winText').style.color = "#F2B137"
         document.getElementById('playerWinText').textContent = "PLAYER " + oMark + " WINS!"
         oCountNum = oCountNum + 1
@@ -633,7 +633,6 @@ function winOrDraw() {
         setTimeout(tiePopup, 500)
     }
 }
-
 
 // Function to quit game and go back to first page
 function quitGame() {
