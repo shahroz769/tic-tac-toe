@@ -177,7 +177,7 @@ p {
     width: 100%;
     height: 59px;
     border-radius: 15px;
-    box-shadow: 0 8px #cc9125;
+    box-shadow: 0 6px #cc9125;
 }
 
 .newgame-player {
@@ -188,7 +188,7 @@ p {
     width: 100%;
     height: 59px;
     border-radius: 15px;
-    box-shadow: 0 8px #18a09b;
+    box-shadow: 0 6px #18a09b;
 }
 
 .X-image img,
@@ -218,7 +218,7 @@ p {
     background-color: var(--clr-black-50--);
     border-radius: 10px;
     margin-right: 20px;
-    box-shadow: 0 5px 0 #10212A;
+    box-shadow: 0 6px 0 #10212A;
 }
 
 .silver-btn {
@@ -286,7 +286,7 @@ p {
     height: 52px;
     background-color: var(--clr-white-100--);
     border-radius: 10px;
-    box-shadow: 0 5px 0 #6B8997;
+    /* box-shadow: 0 5px 0 #6B8997; */
 }
 
 .logo2img img {
@@ -309,6 +309,18 @@ p {
     width: 140px;
     height: 72px;
     border-radius: 15px;
+}
+
+.X-score {
+    box-shadow: 0 6px 0 #18a09b;
+}
+
+.O-score {
+    box-shadow: 0 6px 0 #cc9125;
+}
+
+.ties {
+    box-shadow: 0 6px 0 #6B8997;
 }
 
 .X-score {
